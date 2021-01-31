@@ -1,7 +1,6 @@
-import './styles/variables.scss';
-import './styles/mixins.scss';
-import './styles/resets.scss';
-import './styles/layout.scss';
+import './styles/includes.scss';
 import './styles/typography.scss';
 
-console.log(`hello?`);
+import './styles/navigation.scss';
+
+console.log(`Hello from entry.ts`);

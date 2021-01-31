@@ -1,13 +1,13 @@
 use yew::prelude::*;
 
-pub struct Footer {}
+pub struct About {}
 
-impl Component for Footer {
+impl Component for About {
     type Message = ();
     type Properties = ();
 
     fn create(_props: Self::Properties, _link: ComponentLink<Self>) -> Self {
-        Footer {}
+        About {}
     }
 
     fn update(&mut self, _props: Self::Message) -> ShouldRender {
@@ -20,9 +20,9 @@ impl Component for Footer {
 
     fn view(&self) -> Html {
         html! {
-            <footer class="footer">
-                {"this is the footer"}
-            </footer>
+            <main class="main about">
+                <h1 class="h1">{"This is about page"}</h1>
+            </main>
         }
     }
 } 

@@ -1,0 +1,14 @@
+@import './includes.scss';
+
+.nav {
+    @include flex(space-between);
+    border: 1px solid red;
+
+    
+
+    .ul {
+        li:not(:last-of-type) {
+            margin-right: 15px;
+        }
+    }
+}

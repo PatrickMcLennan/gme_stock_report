@@ -1,4 +1,5 @@
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
@@ -10,6 +11,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "static"),
         hot: true,
+        historyApiFallback: true
     },
     module: {
         rules: [
@@ -35,6 +37,10 @@ module.exports = {
     optimization: {
         minimizer: [
           new CssMinimizerPlugin(),
+          new HtmlWebpackPlugin({
+              minify: true,
+              template: path.join(__dirname, `src`, `template.html`)
+          })
         ],
     },
 }

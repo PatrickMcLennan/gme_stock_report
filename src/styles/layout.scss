@@ -12,12 +12,14 @@ body {
 @each $region in ("nav", "main", "footer") {
     .#{$region} {
         grid-area: $region;
-    }
-}
+        padding: 0 7.5%;
 
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        @include tablet() {
+            padding: 0 5%;
+        }
+
+        @include mobile() {
+            padding: 0 15px;
+        }
+    }
 }

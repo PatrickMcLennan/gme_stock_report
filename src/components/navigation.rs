@@ -1,5 +1,7 @@
 use yew::prelude::*;
 
+use crate::utils::router::{AppRoute, Link};
+
 pub struct Navigation {}
 
 impl Component for Navigation {
@@ -21,7 +23,14 @@ impl Component for Navigation {
     fn view(&self) -> Html {
         html! {
             <nav class="nav">
-                {"this is the nav"}
+                <h1 class="h1">{"GME Stock Report"}</h1>
+                <ul class="ul">
+                    <li>
+                        <Link route=AppRoute::Index>{"Home"}</Link>
+                        <Link route=AppRoute::About>{"About"}</Link>
+                        <Link route=AppRoute::ShouldISell>{"Should I Sell?"}</Link>
+                    </li>
+                </ul>
             </nav>
         }
     }

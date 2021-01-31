@@ -2,9 +2,13 @@
 
 mod components;
 mod views;
+mod utils;
 
 use components::navigation::Navigation;
 use components::footer::Footer;
+
+use utils::router::AppRouter;
+
 use wasm_bindgen::prelude::*;
 use yew::prelude::*;
 
@@ -30,9 +34,7 @@ impl Component for Model {
         html! {
             <>
                 <Navigation />
-                <main class="main">
-
-                </main>
+                <AppRouter />
                 <Footer />
             </>
         }

@@ -1,13 +1,13 @@
 use yew::prelude::*;
 
-pub struct Footer {}
+pub struct Index {}
 
-impl Component for Footer {
+impl Component for Index {
     type Message = ();
     type Properties = ();
 
     fn create(_props: Self::Properties, _link: ComponentLink<Self>) -> Self {
-        Footer {}
+        Index {}
     }
 
     fn update(&mut self, _props: Self::Message) -> ShouldRender {
@@ -20,9 +20,9 @@ impl Component for Footer {
 
     fn view(&self) -> Html {
         html! {
-            <footer class="footer">
-                {"this is the footer"}
-            </footer>
+            <main class="main index">
+                <h1 class="h1">{"This is The Homepage"}</h1>
+            </main>
         }
     }
 } 
