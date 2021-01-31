@@ -1,0 +1,6 @@
+@import './mixins.scss';
+
+.h1 {
+    @include fontLine(25);
+    margin-bottom: 20px;
+}

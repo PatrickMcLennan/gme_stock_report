@@ -1,0 +1,13 @@
+@function rem($px) {
+    @return ($px / 16)+rem;
+}
+
+// - Mixins - //
+@mixin fontLine($fs, $lh: null) {
+    font-size: rem($fs);
+    @if $lh != null {
+        line-height: rem($lh);
+    } @else {
+        line-height: normal;
+    }
+}

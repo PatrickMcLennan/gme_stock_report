@@ -1,0 +1,7 @@
+
+# RUST
+/target
+Cargo.lock
+
+#JS
+/node_modules

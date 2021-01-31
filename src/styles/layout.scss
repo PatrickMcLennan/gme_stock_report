@@ -1,0 +1,23 @@
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas: 
+        "nav"
+        "main"
+        "footer"
+    ;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+@each $region in ("nav", "main", "footer") {
+    .#{$region} {
+        grid-area: $region;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
